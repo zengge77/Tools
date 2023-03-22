@@ -1,0 +1,25 @@
+[
+	//选择
+	{ "keys": ["ctrl+w"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+shift+w"], "command": "expand_selection", "args": {"to": "smart"} },
+	{ "keys": ["ctrl+shift+w"], "command": "expand_selection", "args": {"to": "tag"}, "context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "(text.html, text.xml) - source", "match_all": true }
+		]
+	},
+
+	//格式化
+	//{ "keys": ["ctrl+shift+a"], "command": "reindent" },
+	{ "keys": ["ctrl+k", "ctrl+d"], "command": "reindent" },
+
+	//行
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+shift+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	//书签
+	{ "keys": ["alt+down"], "command": "next_bookmark" },
+	{ "keys": ["alt+up"], "command": "prev_bookmark" },
+	{ "keys": ["alt+right"], "command": "toggle_bookmark" },
+	{ "keys": ["alt+left"], "command": "clear_bookmarks" },
+	{ "keys": ["alt+f2"], "command": "select_all_bookmarks" },
+]
